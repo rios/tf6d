@@ -1,0 +1,12 @@
+{ "templates_gt_path": "./database/gts/template_gts/lmoWonder3d_template_panda40_gt_dinov2.json",
+  "gt_path": "./database/gts/test_gts/lmo_bop_test_gt_fastsam_filter.json",
+  "dataset_path": "/home/users/u6854640/Workspace/Pose/BoP/lmoWonder3d",
+  "scale_factor": 0.001,
+  "bbox_type": "bbox_visib",
+  "template_subset": 1,
+  "results_file": "MASt3R40lmoWonder3dFilter_lmo-test_bop.csv",
+  "norm_factor_path":"./database/templates/lmoWonder3d/models_panda40/norm_factor.json",
+  "num_matched_templates":40,
+  "image_resolution":[480, 640],
+  "debug_imgs": 1
+}

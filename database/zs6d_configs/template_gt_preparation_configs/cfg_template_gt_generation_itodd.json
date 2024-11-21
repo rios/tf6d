@@ -1,0 +1,13 @@
+{"path_templates_folder": "/data/weijian/Pose/BoP/templates_panda401/itodd/",
+ "path_template_poses": "/data/weijian/Pose/BoP/templates_panda401/itodd/object_poses/000001.npy",
+ "path_object_models_folder": "/data/weijian/Pose/BoP/itodd/models",
+ "path_models_info_json": "/data/weijian/Pose/BoP/itodd/models/models_info.json",
+ "obj_models_scale": 0.001,
+ "path_output_templates_and_descs_folder": "./database/templates/itodd/templates_panda401/itodd_desc_dinov2",
+ "path_output_models_xyz": "./database/templates/itodd/models_panda401/",
+ "cam_K": [ 2992.14, 0.0, 633.412,
+             0.0, 3003.49, 489.882,
+             0.0, 0.0, 1.0],
+ "template_resolution": [960, 1280],
+ "output_template_gt_file":"./database/gts/template_gts/itodd_template_panda401_gt_dinov2.json"
+}

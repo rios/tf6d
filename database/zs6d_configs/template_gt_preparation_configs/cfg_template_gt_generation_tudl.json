@@ -1,0 +1,13 @@
+{"path_templates_folder": "/data/weijian/Pose/BoP/templates_panda50/tudl/",
+ "path_template_poses": "/data/weijian/Pose/BoP/templates_panda50/tudl/object_poses/000001.npy",
+ "path_object_models_folder": "/data/weijian/Pose/BoP/tudl/models",
+ "path_models_info_json": "/data/weijian/Pose/BoP/tudl/models/models_info.json",
+ "obj_models_scale": 0.001,
+ "path_output_templates_and_descs_folder": "./database/templates/tudl/templates_panda50/tudl_desc_dinov2",
+ "path_output_models_xyz": "./database/templates/tudl/models_panda50/",
+ "cam_K":  [515.0, 0.0, 321.566,
+            0.0, 515.0, 214.08,
+            0.0, 0.0, 1.0],
+ "template_resolution": [480, 640],
+ "output_template_gt_file":"./database/gts/template_gts/tudl_template_panda50_gt_dinov2.json"
+}

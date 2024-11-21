@@ -1,0 +1,13 @@
+{"path_templates_folder": "/data/weijian/Pose/BoP/templates_panda401/icbin/",
+ "path_template_poses": "/data/weijian/Pose/BoP/templates_panda401/icbin/object_poses/000001.npy",
+ "path_object_models_folder": "/data/weijian/Pose/BoP/icbin/models",
+ "path_models_info_json": "/data/weijian/Pose/BoP/icbin/models/models_info.json",
+ "obj_models_scale": 0.001,
+ "path_output_templates_and_descs_folder": "./database/templates/icbin/templates_panda401/icbin_desc_dinov2",
+ "path_output_models_xyz": "./database/templates/icbin/models_panda401/",
+ "cam_K": [ 550.0, 0.0, 316.0,
+           0.0, 540.0, 244.0,
+           0.0, 0.0, 1.0],
+ "template_resolution": [480, 640],
+ "output_template_gt_file":"./database/gts/template_gts/icbin_template_panda401_gt_dinov2.json"
+}

@@ -1,0 +1,11 @@
+{"path_templates_folder": "/data/weijian/Pose/BoP/templates_panda50/tless/",
+ "path_template_poses": "/data/weijian/Pose/BoP/templates_panda50/tless/object_poses/000001.npy",
+ "path_object_models_folder": "/data/weijian/Pose/BoP/tless/models_cad",
+ "path_models_info_json": "/data/weijian/Pose/BoP/tless/models_cad/models_info.json",
+ "obj_models_scale": 0.001,
+ "path_output_templates_and_descs_folder": "./database/templates/tless/templates_panda50/tless_desc_dinov2",
+ "path_output_models_xyz": "./database/templates/tless/models_panda50/",
+ "cam_K": [1075.65091572, 0.0, 360, 0.0, 1073.90347929, 270, 0.0, 0.0, 1.0],
+ "template_resolution": [540, 720],
+ "output_template_gt_file":"./database/gts/template_gts/tless_template_panda50_gt_dinov2.json"
+}

@@ -1,6 +1,6 @@
 { "templates_gt_path": "./database/gts/template_gts/hb_template_panda40_gt_dinov2l9.json",
   "gt_path": "./database/gts/test_gts/hb_bop_test_gt_fastsam.json",
-  "dataset_path": "/home/users/u6854640/Workspace/Pose/BoP/hb",
+  "dataset_path": "./data/bop/hb",
   "scale_factor": 0.001,
   "bbox_type": "bbox_visib",
   "template_subset": 1,

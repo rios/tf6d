@@ -59,7 +59,7 @@ def calculate_iou(bbox1, bbox2):
 def main():
     # Dataset setup
     dataset_name = 'itodd'
-    dataset_path = '/data/weijian/Pose/BoP/'
+    dataset_path = './data/bop/'
     cad_name = 'models_cad' if dataset_name == 'tless' else 'models'
 
     if dataset_name == 'tless':
@@ -72,8 +72,8 @@ def main():
     # Load data
     test_list, cnos_dets = utils.load_test_list_and_cnos_detections(
         dataset_path, dataset_name,
-        '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_itodd-test_df32d45b-301c-4fc9-8769-797904dd9325.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_hb-test_db836947-020a-45bd-8ec5-c95560b68011.json',
+        './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_itodd-test_df32d45b-301c-4fc9-8769-797904dd9325.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_hb-test_db836947-020a-45bd-8ec5-c95560b68011.json',
         max_det_per_object_id=15,
     )
     # camera_info = utils.load_json(os.path.join(dataset_path, dataset_name, 'camera_primesense.json'))
@@ -104,7 +104,7 @@ def main():
         detection_im_info = cnos_dets[scene_im]
         im_info = f"{scene_id}_{image_id}"
         fastsam_gt[im_info] = []
-        path_prefix = f'/home/users/u6854640/Workspace/Pose/BoP/{dataset_name}/{test_set_name}/{scene_id}/mask_visib/{int(image_id):06d}'
+        path_prefix = f'./data/bop/{dataset_name}/{test_set_name}/{scene_id}/mask_visib/{int(image_id):06d}'
         matching_files = glob.glob(f'{path_prefix}*.png')
 
         # masks
@@ -114,7 +114,7 @@ def main():
             masks.append(gt_mask)
 
         # for anno_id, gt in enumerate(gt_im_info):
-        #     gt_mask_name = f'/home/users/u6854640/Workspace/Pose/BoP/{dataset_name}/' + f'/{test_set_name}/{scene_id}/mask_visib/{int(image_id):06d}_{int(anno_id):06d}.png'
+        #     gt_mask_name = f'./data/bop/{dataset_name}/' + f'/{test_set_name}/{scene_id}/mask_visib/{int(image_id):06d}_{int(anno_id):06d}.png'
         #     gt_mask = np.array(Image.open(gt_mask_name)) / 255.0
         #
         #     iou = mask_iou(mask, np.array(gt_mask))

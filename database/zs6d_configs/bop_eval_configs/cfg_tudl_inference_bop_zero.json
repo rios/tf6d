@@ -1,6 +1,6 @@
 { "templates_gt_path": "./database/gts/template_gts/tudl_template_panda401_gt_dinov2.json",
   "gt_path": "./database/gts/test_gts/tudl_bop_test_gt_fastsam_filter.json",
-  "dataset_path": "/home/users/u6854640/Workspace/Pose/BoP/tudl",
+  "dataset_path": "./data/bop/tudl",
   "scale_factor": 0.001,
   "bbox_type": "bbox_visib",
   "template_subset": 1,

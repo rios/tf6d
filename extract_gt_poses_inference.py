@@ -9,7 +9,7 @@ from pose_utils.img_utils import rle_to_mask
 def main():
     # Dataset setup
     dataset_name = 'itodd'
-    dataset_path = '/data/weijian/Pose/BoP/'
+    dataset_path = './data/bop/'
     cad_name = 'models_cad' if dataset_name == 'tless' else 'models'
 
     if dataset_name == 'tless':
@@ -22,12 +22,12 @@ def main():
     # Load data
     test_list, cnos_dets = utils.load_test_list_and_cnos_detections(
         dataset_path, dataset_name,
-        '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_itodd-test_df32d45b-301c-4fc9-8769-797904dd9325.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_hb-test_db836947-020a-45bd-8ec5-c95560b68011.json'
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tudl-test_c48a2a95-1b41-4a51-9920-a667cb3d7149.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_lmo-test_3cb298ea-e2eb-4713-ae9e-5a7134c5da0f.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_ycbv-test_f4f2127c-6f59-447c-95b3-28e1e591f1a1.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tless-test_8ca61cb0-4472-4f11-bce7-1362a12d396f.json',
+        './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_itodd-test_df32d45b-301c-4fc9-8769-797904dd9325.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_hb-test_db836947-020a-45bd-8ec5-c95560b68011.json'
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tudl-test_c48a2a95-1b41-4a51-9920-a667cb3d7149.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_lmo-test_3cb298ea-e2eb-4713-ae9e-5a7134c5da0f.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_ycbv-test_f4f2127c-6f59-447c-95b3-28e1e591f1a1.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tless-test_8ca61cb0-4472-4f11-bce7-1362a12d396f.json',
         #  max_det_per_object_id=16,
     )
 

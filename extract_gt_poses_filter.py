@@ -59,7 +59,7 @@ def calculate_iou(bbox1, bbox2):
 def main():
     # Dataset setup
     dataset_name = 'tless'
-    dataset_path = '/data/weijian/Pose/BoP/'
+    dataset_path = './data/bop/'
     cad_name = 'models_cad' if dataset_name == 'tless' else 'models'
 
     if dataset_name == 'tless':
@@ -72,12 +72,12 @@ def main():
     # Load data
     test_list, cnos_dets = utils.load_test_list_and_cnos_detections(
         dataset_path, dataset_name,
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_icbin-test_f21a9faf-7ef2-4325-885f-f4b6460f4432.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_hb-test_db836947-020a-45bd-8ec5-c95560b68011.json'
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tudl-test_c48a2a95-1b41-4a51-9920-a667cb3d7149.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_lmo-test_3cb298ea-e2eb-4713-ae9e-5a7134c5da0f.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_ycbv-test_f4f2127c-6f59-447c-95b3-28e1e591f1a1.json',
-        '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tless-test_8ca61cb0-4472-4f11-bce7-1362a12d396f.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_icbin-test_f21a9faf-7ef2-4325-885f-f4b6460f4432.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_hb-test_db836947-020a-45bd-8ec5-c95560b68011.json'
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tudl-test_c48a2a95-1b41-4a51-9920-a667cb3d7149.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_lmo-test_3cb298ea-e2eb-4713-ae9e-5a7134c5da0f.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_ycbv-test_f4f2127c-6f59-447c-95b3-28e1e591f1a1.json',
+        './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tless-test_8ca61cb0-4472-4f11-bce7-1362a12d396f.json',
         max_det_per_object_id=10,
     )
     # camera_info = utils.load_json(os.path.join(dataset_path, dataset_name, 'camera_primesense.json'))
@@ -137,7 +137,7 @@ def main():
                     best_anno_id = anno_id
 
             # for anno_id, gt in enumerate(gt_im_info):
-            #     gt_mask_name = f'/home/users/u6854640/Workspace/Pose/BoP/{dataset_name}/' + f'/{test_set_name}/{scene_id}/mask_visib/{int(image_id):06d}_{int(anno_id):06d}.png'
+            #     gt_mask_name = f'./data/bop/{dataset_name}/' + f'/{test_set_name}/{scene_id}/mask_visib/{int(image_id):06d}_{int(anno_id):06d}.png'
             #     gt_mask = np.array(Image.open(gt_mask_name)) / 255.0
             #
             #     iou = mask_iou(mask, np.array(gt_mask))
@@ -160,7 +160,7 @@ def main():
             depth_name = f'./{test_set_name}/{scene_id}/depth/{int(image_id):06d}.png'
             model_info = models_info[str(obj_id)]
 
-            # img = Image.open(f'/home/users/u6854640/Workspace/Pose/BoP/{dataset_name}/' + img_name)
+            # img = Image.open(f'./data/bop/{dataset_name}/' + img_name)
             # best_gt_bbox = gt_im_info[best_anno_id]["bbox_visib"]
             # draw_and_calculate_iou(img, bbox, best_gt_bbox)
 

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import math
+import os
 import sys
 
 import numpy as np
@@ -11,7 +12,7 @@ from PIL import Image
 from torch.nn.functional import interpolate
 from torchvision import transforms
 
-sys.path.insert(0, "/nfs/turbo/justincj-turbo/mbanani/projects/zero123/zero123")
+sys.path.insert(0, os.environ.get("ZERO123_PATH", "./external/zero123"))
 
 from ldm.models.diffusion.ddim import DDIMSampler
 from ldm.util import instantiate_from_config
@@ -110,8 +111,9 @@ def sample_model(input_im, model, sampler, n_samples=1, scale=3):
 
 
 def get_zero123():
-    ckpt = "/nfs/turbo/justincj-turbo/mbanani/projects/zero123/zero123/105000.ckpt"
-    config = "/nfs/turbo/justincj-turbo/mbanani/projects/zero123/zero123/configs/sd-objaverse-finetune-c_concat-256.yaml"
+    zero123_dir = os.environ.get("ZERO123_PATH", "./external/zero123")
+    ckpt = os.path.join(zero123_dir, "105000.ckpt")
+    config = os.path.join(zero123_dir, "configs/sd-objaverse-finetune-c_concat-256.yaml")
     device = "cuda:0"
     config = OmegaConf.load(config)
 

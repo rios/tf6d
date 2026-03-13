@@ -20,7 +20,7 @@ file_name = 'MASt3R40Filter_%s-test_bop' % (dataset_name)
 input_file_path = './logs/results_fastsam_final/%s.csv' % (file_name)
 gt_path = "./database/gts/test_gts/%s_bop_test_gt_fastsam_filter.json" % (dataset_name)
 data_gt = load_json_file(gt_path)  # load fastSAM
-dataset_path = "/home/users/u6854640/Workspace/Pose/BoP/%s/" % (dataset_name)
+dataset_path = "./data/bop/%s/" % (dataset_name)
 
 save_path = 'logs/vis/'
 

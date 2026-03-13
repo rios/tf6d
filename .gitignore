@@ -1,2 +1,60 @@
-
+# OS artifacts
 .DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+conda-env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment & secrets
+.env
+.env.local
+*.pem
+*.key
+credentials.json
+
+# Logs
+*.log
+wget-log
+
+# Model weights & data (too large for git)
+*.pth
+*.ckpt
+*.pt
+*.bin
+*.h5
+checkpoint_weights/
+pretrained_models/
+
+# Build artifacts
+*.o
+*.dylib
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Project-specific
+data/
+logs/
+results/
+oss-audit/
+oss-prepare/

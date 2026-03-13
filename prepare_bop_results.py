@@ -78,9 +78,9 @@ dataset_name = 'tless'
 file_name = 'MASt3R401-%s-test_bop' % (dataset_name)
 input_file_path = './logs/results_fastsam_final/All%s.csv' % (file_name)
 output_file_path_n = './logs/results_fastsam_final/Group%s.csv' % (file_name)
-# output_file_path_n = '/data/weijian/Codes/Pose/gigapose/gigaPose_datasets/results/large_%sdinov2/predictions/Group%s.csv' % (dataset_name, file_name)
+# output_file_path_n = './results/large_%sdinov2/predictions/Group%s.csv' % (dataset_name, file_name)
 
-output_file_path_k = '/data/weijian/Codes/Pose/gigapose/gigaPose_datasets/results/large_%spoe3r/predictions/TopK%sMultiHypothesis.csv' % (
+output_file_path_k = './results/large_%spoe3r/predictions/TopK%sMultiHypothesis.csv' % (
 dataset_name,
 file_name)
 

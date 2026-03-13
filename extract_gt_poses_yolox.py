@@ -9,7 +9,7 @@ from pose_utils.img_utils import rle_to_mask
 def main():
     # Dataset setup
     dataset_name = 'lmo'
-    dataset_path = '/data/weijian/Pose/BoP/'
+    dataset_path = './data/bop/'
     cad_name = 'models_cad' if dataset_name == 'tless' else 'models'
 
     if dataset_name == 'tless':
@@ -22,11 +22,11 @@ def main():
     # Load data
     test_list, cnos_dets = utils.load_test_list_and_cnos_detections(
         dataset_path, dataset_name,
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_hb-test_db836947-020a-45bd-8ec5-c95560b68011.json'
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tudl-test_c48a2a95-1b41-4a51-9920-a667cb3d7149.json',
-        '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_lmo-test_3cb298ea-e2eb-4713-ae9e-5a7134c5da0f.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_ycbv-test_f4f2127c-6f59-447c-95b3-28e1e591f1a1.json',
-        # '/data/weijian/Pose/BoP/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tless-test_8ca61cb0-4472-4f11-bce7-1362a12d396f.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_hb-test_db836947-020a-45bd-8ec5-c95560b68011.json'
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tudl-test_c48a2a95-1b41-4a51-9920-a667cb3d7149.json',
+        './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_lmo-test_3cb298ea-e2eb-4713-ae9e-5a7134c5da0f.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_ycbv-test_f4f2127c-6f59-447c-95b3-28e1e591f1a1.json',
+        # './data/bop/default_detections/core19_model_based_unseen/cnos-fastsam/cnos-fastsam_tless-test_8ca61cb0-4472-4f11-bce7-1362a12d396f.json',
         #  max_det_per_object_id=4,
     )
     # camera_info = utils.load_json(os.path.join(dataset_path, dataset_name, 'camera_primesense.json'))
@@ -54,7 +54,7 @@ def main():
         gt_mapping = {obj_data['obj_id']: obj_data for obj_data in gt_im_info}
 
         # Process each detection
-        detection_result = '/data/weijian/Pose/BoP/default_detections/YOLOX/yolox_x_640_lmo_pbr_lmo_bop_test.json'
+        detection_result = './data/bop/default_detections/YOLOX/yolox_x_640_lmo_pbr_lmo_bop_test.json'
         yolo_detection = utils.load_json(detection_result)
         # detection_im_info = cnos_dets[scene_im]
         im_info = f"{scene_id}_{image_id}"

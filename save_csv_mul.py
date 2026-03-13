@@ -62,9 +62,9 @@ def process_data_top_k(file_path, output_path, m=1, k=1, metric_type='pnp_inline
 # Usage Examples
 input_file = './logs/results_fastsam_final/AllMASt3R8Conf-lmo-test_bop.csv'
 out_top1_file = './logs/results_fastsam_final/Top1MASt3R8Conf_lmo-test_bop.csv'
-# out_top1_file = '/data/weijian/Codes/Pose/gigapose/gigaPose_datasets/results/large_lmodinov2/predictions/Top1MASt3R8Conf_lmo-test_bop.csv'
+# out_top1_file = './results/large_lmodinov2/predictions/Top1MASt3R8Conf_lmo-test_bop.csv'
 
-out_topk_file = '/data/weijian/Codes/Pose/gigapose/gigaPose_datasets/results/large_lmodinov2/predictions/TopkMul-lmo-test_bopMultiHypothesis.csv'
+out_topk_file = './results/large_lmodinov2/predictions/TopkMul-lmo-test_bopMultiHypothesis.csv'
 
 # Using the sum of top-m 'pnp_inliners' as the metric
 # process_data(input_file, out_top1_file, m=1, metric_type='pnp_inliners')

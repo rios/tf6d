@@ -1,6 +1,6 @@
 { "templates_gt_path": "./database/gts/template_gts/tless_template_panda401_gt_dinov2.json",
   "gt_path": "./database/gts/test_gts/tless_bop_test_gt_fastsam_filter.json",
-  "dataset_path": "/home/users/u6854640/Workspace/Pose/BoP/tless",
+  "dataset_path": "./data/bop/tless",
   "scale_factor": 0.001,
   "bbox_type": "bbox_visib",
   "template_subset": 1,
